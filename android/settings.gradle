@@ -1,0 +1,3 @@
+rootProject.name = 'rebelw_test'
+
+include ':app'
