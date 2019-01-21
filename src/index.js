@@ -12,4 +12,5 @@ class App extends Component {
     );
   }
 }
+console.disableYellowBox = true;
 export default App;

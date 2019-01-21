@@ -56,12 +56,13 @@ export default class Header extends Component {
 
     }
 
-
+  // <Image source={require('../assets/ios_back.png')} style={[styles.defaultColor, styles.imgSize]} />
     renderBackButton() {
-       
+
         return (
-            <Button transparent onPress={() => { Actions.pop() }}>
+            <Button transparent onPress={() => { Actions.reset('movies') }}>
                 <Image source={require('../assets/ios_back.png')} style={[styles.defaultColor, styles.imgSize]} />
+
             </Button>
 
         );

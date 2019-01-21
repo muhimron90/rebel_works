@@ -3,19 +3,26 @@ import { Router, Scene, Stack, ActionConst, Actions } from 'react-native-router-
 import React, { Component } from 'react';
 
 import Movies from './screens/movies';
-import MovieDetails from "./screens/movies/movDetail";
+import Detail from "./screens/details";
+
 class Nav extends Component {
 
 
   render() {
-    return <Router>
+    return (
+      <Router>
         <Stack key="root">
-          <Stack key="movies" hideNavBar initial>
-            <Scene key="movies" component={Movies} />
-            <Scene key="moviedetails" component={MovieDetails} />
+          <Stack key='movies' hideNavBar>
+          <Scene key='movies' initial component={Movies} type={ActionConst.REPLACE}  />
+
+        <Scene key='moviedetails' component={Detail} type={ActionConst.PUSH}  />
+
           </Stack>
+
         </Stack>
-      </Router>;
+      </Router>
+    );
+
   }
 }
 
